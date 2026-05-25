@@ -64,8 +64,8 @@ profile {
     output "Dell Inc. DELL U2419H 7YS4Y83" enable mode 1920x1080@60.00 transform 90 position 3000,-480 scale 1
 }
 profile {
-    output "LG Electronics LG ULTRAGEAR 0x00006A6D" enable mode 1920x1080@120.00 scale 1
-    output eDP-1 enable mode 1920x1080@60.00 scale 1
+    output eDP-1 enable mode 1920x1080@60.00 scale 1 position 1920,0
+    output "LG Electronics LG ULTRAGEAR 0x00006A6D" enable mode 1920x1080@120.00 scale 1 position 0,0
 }
 
 profile {
