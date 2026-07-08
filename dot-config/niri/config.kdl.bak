@@ -145,7 +145,7 @@ window-rule {
     match app-id=r#"qemu$"#
     open-floating true
 }
-window-rule {
+window-rulel {
     // This app-id regular expression will work for both:
     match title="^Qemu-system-i386"
     open-floating true
@@ -158,7 +158,7 @@ window-rule {
 
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
-/-window-rule {
+window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
 

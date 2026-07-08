@@ -1,0 +1,14 @@
+[user]
+	email = julienabitang@gmail.com
+	name = Julien A Bitang
+[init]
+    defaultBranch = main
+
+[diff]
+    tool = nvimdiff
+
+[merge]
+    tool= nvimdiff2
+
+[mergetool]
+    keepBackup = false
