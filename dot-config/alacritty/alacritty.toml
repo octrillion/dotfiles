@@ -1,6 +1,6 @@
 [general]
 
-import = ["dracula.toml"]
+import = ["orange.toml"]
 live_config_reload = true
 
 [window]
