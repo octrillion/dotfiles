@@ -1,12 +1,15 @@
 source /usr/share/cachyos-fish-config/cachyos-config.fish
-if status is-login 
-    eval $(ssh-agent -c)
-end 
 
 set -x XDG_CONFIG_HOME "$HOME/.config"
 set -x XDG_PICTURES_DIR "$HOME/Pictures"
 
 if status is-interactive
+
+    if not set -q SSH_AUTH_SOCK
+        eval (ssh-agent -c) > /dev/null
+        set -Ux SSH_AUTH_SOCK $SSH_AUTH_SOCK
+        set -Ux SSH_AGENT_PID $SSH_AGENT_PID
+    end
     # Commands to run in interactive sessions can go here
     set -x MANPAGER "nvim --clean +Man!"
     set -x EDITOR "/usr/bin/nvim"
