@@ -1,6 +1,8 @@
 source /usr/share/cachyos-fish-config/cachyos-config.fish
+if status is-login 
+    eval $(ssh-agent -c)
+end 
 
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 set -x XDG_CONFIG_HOME "$HOME/.config"
 set -x XDG_PICTURES_DIR "$HOME/Pictures"
 
