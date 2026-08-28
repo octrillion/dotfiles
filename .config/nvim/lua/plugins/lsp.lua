@@ -27,6 +27,16 @@ return {
             vim.lsp.enable("csharp-ls")
             vim.lsp.enable("asm_lsp")
             vim.lsp.enable("bashls")
+            vim.lsp.enable("qmlls")
+            vim.lsp.enable("laravel_ls")
+            vim.lsp.enable("tailwindcss")
+            vim.lsp.enable("marksman")
+            vim.lsp.enable("ltex_plus", {
+                on_attach = function(client, bufnr)
+                    require("ltex_extra").setup() 
+                end,
+            })
+            vim.lsp.enable("pylsp")
 
             vim.diagnostic.config({
                 virtual_text = {

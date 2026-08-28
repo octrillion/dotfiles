@@ -4,11 +4,13 @@ return {
         dependencies = {
             "nvim-lua/plenary.nvim",
             { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+            "nvim-telescope/telescope-ui-select.nvim",
         },
         config = function()
             local builtin = require("telescope.builtin")
             local ts = require("telescope")
-            
+
+            ts.load_extension("ui-select");
             ts.setup({
                 defaults = {
                     theme = "dropdown",

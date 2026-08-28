@@ -32,10 +32,5 @@ return {
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
     "zbirenbaum/copilot.lua",
-    {
-      "MeanderingProgrammer/render-markdown.nvim",
-      opts = { file_types = { "markdown", "Avante" } },
-      ft = { "markdown", "Avante" },
-    },
   },
 }
