@@ -17,3 +17,4 @@ if status is-interactive
     abbr -a sail composer exec sail
     fastfetch
 end
+direnv hook fish | source

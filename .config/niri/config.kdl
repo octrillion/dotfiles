@@ -90,17 +90,13 @@ layout {
 
 
 
-spawn-at-startup "waybar"
-spawn-at-startup "nm-applet --indicator"
-spawn-at-startup "kanshi"
-spawn-at-startup "swaybg"
-spawn-at-startup "/home/jarchi/.config/niri/window_rule_fix"
+spawn-at-startup "./window_rule_fix"
 
-spawn-at-startup "dunst"
-spawn-at-startup "apotdbg"
-spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
+//spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
 spawn-sh-at-startup "swayidle -w timeout 600 'swaylock -f' timeout 5000 'niri msg action power-off-monitors' resume 'niri msg action power-on-monitors' before-sleep 'swaylock -f'"
 
+spawn-at-startup "dms" "run"
+spawn-at-startup "dcal" "daemon"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
@@ -421,3 +417,8 @@ binds {
 
     Mod+p { spawn-sh "rofi -show p -modi p:rofi-power-menu";}
 }
+
+// DMS Include Configs
+include "dms/layout.kdl"
+include "dms/binds.kdl"
+include "dms/outputs.kdl"
